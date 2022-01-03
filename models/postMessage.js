@@ -1,7 +1,7 @@
-const mongoose = ('mongoose');
-const { Schema } = mongoose;
+const { Schema, model } = require('mongoose');
 
-const postSchema = new Schema({
+
+const postSchema = Schema({
    title: String,
    message: String,
    name: String,
@@ -17,4 +17,4 @@ const postSchema = new Schema({
       default: new Date()
    }
 })
-module.exports=mongoose.model("PostMessage", postSchema);
+module.exports= model("PostMessage", postSchema);
